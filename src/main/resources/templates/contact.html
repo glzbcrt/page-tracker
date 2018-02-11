@@ -1,0 +1,31 @@
+
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: head('Page Tracker | Contact')">
+</head>
+
+<body>
+
+<div th:replace="header :: header"></div>
+
+<form action="/thankyou" method="post" id="contact">
+
+	<input type="hidden" name="userId" id="userId">
+	<label>Name:</label><input type="text" name="name"><br>
+	<label>E-mail:</label><input type="email" name="email">
+	<input type="submit" >
+
+</form>
+
+<script>
+
+	$('#contact').submit(function() {
+		document.getElementById("userId").value = localStorage.getItem("pgtid");
+	});
+
+</script>
+
+</body>
+</html>

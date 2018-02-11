@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: head('Page Tracker | Event Feed')">
+</head>
+
+<body>
+
+<script id="hit-template" type="text/x-handlebars-template" src="/assets/js/hit-template.hbars"></script>
+<script id="contact-template" type="text/x-handlebars-template" src="/assets/js/contact-template.hbars"></script>
+
+<div th:replace="header :: header"></div>
+
+<div id="feed">
+</div>
+
+<script>
+
+	var templates = {};
+
+	$.get(document.getElementById("hit-template").src, function(data) {
+			templates["HIT"] = Handlebars.compile(data);
+	});
+
+	$.get(document.getElementById("contact-template").src, function(data) {
+			templates["CONTACT"] = Handlebars.compile(data);
+	});
+
+	var socket = new SockJS("/pagetracker/feed");
+	var stompClient = Stomp.over(socket);
+	stompClient.debug = null;
+
+ 	stompClient.connect({}, function (frame) {
+        stompClient.subscribe("/events", function (message) {
+        	var event = JSON.parse(message.body)
+        	$("#feed").append(templates[event.type](event) + "<br>");
+        	window.scrollTo(0, document.body.scrollHeight);
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

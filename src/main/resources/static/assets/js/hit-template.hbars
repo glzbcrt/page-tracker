@@ -1,0 +1,6 @@
+<div class="hit">
+	<label>Type: </label>{{type}}<br>
+	<label>User Id: </label>{{userId}}<br>
+	<label>Page: </label>{{page.title}} - {{page.description}}<br>
+	<label>When: </label>{{timestamp.dayOfMonth}}/{{timestamp.monthValue}}/{{timestamp.year}} {{timestamp.hour}}:{{timestamp.minute}}:{{timestamp.second}} UTC<br>
+</div>

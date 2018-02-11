@@ -1,0 +1,6 @@
+<div class="contact">
+	<label>Type: </label>{{type}}<br>
+	<label>User Id: </label>{{userId}}<br>
+	<label>Name: </label>{{name}}<br>
+	<label>Email: </label>{{email}}<br>
+</div>
