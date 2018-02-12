@@ -7,7 +7,10 @@ _As a sample application I created both the sample web site and the Page Tracker
  
 ## Quickstart
 
-You can download a release from the repository releases page.
+You can find an instance of this application running on Heroku at https://glzbcrt-page-tracker.herokuapp.com.
+So you do not need to do any install.
+
+Anyway if you want to really install you can download a release from the repository releases page.
 Once you have downloaded the JAR file just run it like this:
 
 ```
@@ -24,15 +27,15 @@ This information is sent to the Page Tracker API which persists this information
 
 The application is a simple Java program using the **Spring Boot** framework. When I build the application a single JAR is created and you can find it in the releases page. The server view engine used is **Thymeleaf**.
 
-I have created a PageTrackerRepository interface to store the page hits and contact requests. Later I created an implementation which persists the information in memory.
-I am using the dependency injection feature of Spring. 
+I have created a **PageTrackerRepository** interface to store the page hits and contact requests. Later I created an implementation which persists the information in memory.
+I am using the dependency injection feature of **Spring** to plug this implementation in the right places.
 
 For the front end I am using **Bootstrap 4** for the UI and **Handlebars.js** to generate the event feed items more easily. 
 
 ## JavaScript Snippet
 
 The JavaScript snippet to track web pages can be found at **src/main/resources/static/assets/js/pagetracker.js**.
-It's a small JavaScript which uses only native resources and do not depend on external libraries. I did it this way to avoid conflicts with exiting libraries and also to be as light as possible.
+It's a small JavaScript which uses only native browser resources and do not depend on external libraries. I did it this way to avoid conflicts with existing libraries and also to be as light as possible.
 
 You can view the source code right here:
 
@@ -64,7 +67,7 @@ console.log("Hit sent to page-tracker.")
 ```
 
 I am basically generating a random id using a function I found on the Internet and persisting this id in the browser local storage.
-This id, the page being rendered and the timestamp are sent to the Page Tracker API where they are recorded and published to the all consumers of the Event Feed.
+This id, the page being rendered and the timestamp are sent to the Page Tracker APIs where they are recorded and published to all consumers of the Event Feed.
 
 ## Heroku and Travis CI
 
