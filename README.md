@@ -3,12 +3,16 @@
 Page Tracker is a sample web application I developed as part of a job interview.
 The challenge was to create an application to track the pages where the users have visited and present this information in a feed.
 
+_As a sample application I created both the sample web site and the Page Tracker APIs in the same Java application to simplify the development and tests. In a real application the Page Tracker APIs should be in its own application._
+ 
 ## Quickstart
 
 You can download a release from the repository releases page.
 Once you have downloaded the JAR file just run it like this:
 
-**#> java -jar page-tracker.jar**
+```
+java -jar page-tracker.jar
+```
 
 then go to your browser and access **http://localhost:8080/feed** to view pages being hit in real-time.
 Open a second tab, access **http://localhost:8080** and navigate the web site. Switch to the feed tab to view the events.
@@ -18,12 +22,12 @@ This information is sent to the Page Tracker API which persists this information
 
 ## Stack
 
-The application is a simple Java program using the Spring Boot framework. When I build the application a single JAR is created and you can find it in the releases page. The server view engine used is Thymeleaf.
+The application is a simple Java program using the **Spring Boot** framework. When I build the application a single JAR is created and you can find it in the releases page. The server view engine used is **Thymeleaf**.
 
 I have created a PageTrackerRepository interface to store the page hits and contact requests. Later I created an implementation which persists the information in memory.
 I am using the dependency injection feature of Spring. 
 
-For the front end I am using Bootstrap 4 for the UI and Handlebars.js to generate the Event Feed more easily. 
+For the front end I am using **Bootstrap 4** for the UI and **Handlebars.js** to generate the event feed items more easily. 
 
 ## JavaScript Snippet
 
@@ -61,3 +65,10 @@ console.log("Hit sent to page-tracker.")
 
 I am basically generating a random id using a function I found on the Internet and persisting this id in the browser local storage.
 This id, the page being rendered and the timestamp are sent to the Page Tracker API where they are recorded and published to the all consumers of the Event Feed.
+
+## Heroku and Travis CI
+
+You can find an instance of this application running on Heroku at https://glzbcrt-page-tracker.herokuapp.com.
+
+I am building this application using Travis CI. Check the builds history at https://travis-ci.org/glzbcrt/page-tracker.
+ 
