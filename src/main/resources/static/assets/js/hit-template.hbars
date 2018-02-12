@@ -1,6 +1,6 @@
 <div class="hit">
-	<label>Type: </label>{{type}}<br>
-	<label>User Id: </label>{{userId}}<br>
-	<label>Page: </label>{{page.title}} - {{page.description}}<br>
-	<label>When: </label>{{timestamp.dayOfMonth}}/{{timestamp.monthValue}}/{{timestamp.year}} {{timestamp.hour}}:{{timestamp.minute}}:{{timestamp.second}} UTC<br>
+	<label>Type:</label>&nbsp;{{type}}<br>
+	<label>User Id:</label>&nbsp;{{userId}}<br>
+	<label>Page:</label>&nbsp;{{page.title}} - {{page.description}}<br>
+	<label>When:</label>&nbsp;{{timestamp.dayOfMonth}}/{{timestamp.monthValue}}/{{timestamp.year}} {{timestamp.hour}}:{{timestamp.minute}}:{{timestamp.second}} UTC<br>
 </div>

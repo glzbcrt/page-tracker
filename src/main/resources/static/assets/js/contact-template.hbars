@@ -1,6 +1,6 @@
 <div class="contact">
-	<label>Type: </label>{{type}}<br>
-	<label>User Id: </label>{{userId}}<br>
-	<label>Name: </label>{{name}}<br>
-	<label>Email: </label>{{email}}<br>
+	<label>Type:</label>&nbsp;{{type}}<br>
+	<label>User Id:</label>&nbsp;{{userId}}<br>
+	<label>Name:</label>&nbsp;{{name}}<br>
+	<label>Email:</label>&nbsp;{{email}}<br>
 </div>

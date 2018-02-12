@@ -5,12 +5,13 @@ The challenge was to create an application to track the pages where the users ha
 
 ## Quickstart
 
-You can download a release from the GitHub release page.
+You can download a release from the repository releases page.
 Once you have downloaded the JAR file just run it like this:
 
 **#> java -jar page-tracker.jar**
 
-then go to your browser and access http://localhost:8080.
+then go to your browser and access **http://localhost:8080/feed** to view pages being hit in real-time.
+Open a second tab, access **http://localhost:8080** and navigate the web site. Switch to the feed tab to view the events.
 
 Every page contains a small JavaScript snippet which tracks any hit the page gets.
 This information is sent to the Page Tracker API which persists this information and update all Even Feed consumers.

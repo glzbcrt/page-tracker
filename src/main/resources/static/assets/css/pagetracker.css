@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+* {
+	font-family: 'Merriweather', serif;
+}
+
+label {
+	font-weight: bold;
+}
+
 .contact {
 	border-style: dashed;
-	background-color: #67727a
+	border-width: 5px;
+	background-color: #67727a;
+	padding: 15px;
 }
 
 .hit {
 	border-style: dashed;
-	background-color: #6991ac
+	border-width: 5px;
+	background-color: #6991ac;
+	padding: 15px;
 }

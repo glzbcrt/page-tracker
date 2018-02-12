@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -10,14 +9,30 @@
 
 <div th:replace="header :: header"></div>
 
-<form action="/thankyou" method="post" id="contact">
+<div class="container">
 
-	<input type="hidden" name="userId" id="userId">
-	<label>Name:</label><input type="text" name="name"><br>
-	<label>E-mail:</label><input type="email" name="email">
-	<input type="submit" >
+	<h1>Contact</h1>
+	Type your contact information in the form below and we will get in touch!
 
-</form>
+	<form action="/thankyou" method="post" id="contact">
+
+		<input type="hidden" name="userId" id="userId">
+
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Type here your name">
+		</div>
+
+		<div class="form-group">
+			<label for="email">Email address</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Type here your e-mail">
+		</div>
+
+		<input class="btn btn-primary btn-lg" type="submit" value="Submit">
+
+	</form>
+
+</div>
 
 <script>
 
