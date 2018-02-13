@@ -5,6 +5,8 @@ The challenge was to create an application to track the pages where the users ha
 
 _As a sample application I created both the sample web site and the Page Tracker APIs in the same Java application to simplify the development and tests. In a real application the Page Tracker APIs should be in its own application._
  
+You can find a small presentation I created for this development here http://bit.ly/2smAJr6.
+ 
 ## Quickstart
 
 You can find an instance of this application running on Heroku at https://glzbcrt-page-tracker.herokuapp.com.
